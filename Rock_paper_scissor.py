@@ -128,7 +128,7 @@ class HandDetector:
         return fingers
 
 quay_Video = cv2.VideoCapture(0)  # khai báo camera với camera id là 0 vì có thể có nhiều camera
-anh_nen = cv2.imread("D:/AIP391/Rock---Paper---Scissor/Du_Lieu/BG.png")
+anh_nen = cv2.imread("D:/AIP391/Rock_Paper_Scissor/Du_Lieu/BG.png")
 quay_Video.set(3, 640)  # thiết lập chiều rộng của cửa sổ camera
 quay_Video.set(4, 480)  # thiết lập chiều cao của cửa sổ camera
 
@@ -143,7 +143,7 @@ Ti_So = [0, 0] # [AI, Nguoi_choi]
 while True:
     thanh_cong, anh = quay_Video.read()  # doc anh tu camera
     # biến thanh_cong kieu boolean de xac nhan da nhan dien chưa
-    anh_nen = cv2.imread("D:/AIP391/Rock---Paper---Scissor/Du_Lieu/BG.png")  # doc anh nen de lam giao dien tro choi
+    anh_nen = cv2.imread("D:/AIP391/Rock_Paper_Scissor/Du_Lieu/BG.png")  # doc anh nen de lam giao dien tro choi
     anh_Scaled = cv2.resize(anh, (0, 0), None, 0.875, 0.875)  # ti le lại ảnh trong video sao cho chiều cao
     # bằng chiều cao của ô trò chơi sẽ để ảnh video vào(cắt chiều cao)
     anh_Scaled = anh_Scaled[:, 80:480]  # ảnh là ma trận,
